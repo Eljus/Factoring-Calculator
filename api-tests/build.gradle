@@ -16,12 +16,21 @@ ext {
     restAssuredVersion = "5.2.0"
     testNgVersion = "7.6.1"
     jacksonDatabindVersion = "2.13.4.2"
+    ownerVersion = "1.0.4"
+    slf4jVersion = "1.7.25"
+    logbackClassicVersion = "1.2.5"
+    logbackCoreVersion = "1.2.3"
 }
 
 dependencies {
-    testImplementation "io.rest-assured:rest-assured:${restAssuredVersion}"
-    testImplementation "org.testng:testng:${testNgVersion}"
+    implementation "io.rest-assured:rest-assured:${restAssuredVersion}"
+    implementation "org.aeonbits.owner:owner:${ownerVersion}"
+    implementation "org.testng:testng:${testNgVersion}"
     implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonDatabindVersion}"
+    implementation "org.slf4j:slf4j-api:${slf4jVersion}"
+    implementation "ch.qos.logback:logback-classic:${logbackClassicVersion}"
+    implementation "ch.qos.logback:logback-core:${logbackCoreVersion}"
+
 }
 
 test {

@@ -1,4 +1,4 @@
-package com.calculator.api;
+package com.calculator.api.payloads;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
@@ -15,7 +15,7 @@ public class FactoringCalculate {
 
     @JsonProperty("v7")
     private String v7;
- 
+
     @JsonProperty("v9")
     private String v9;
 

@@ -1,10 +1,17 @@
-import com.calculator.api.FactoringCalculate;
+package com.calculator.tests;
+
+import com.calculator.api.services.ApiService;
+import com.calculator.api.payloads.FactoringCalculate;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import lombok.extern.slf4j.Slf4j;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+@Slf4j
 public class CalculatorTest {
+
+    private final ApiService apiService = new ApiService();
 
     @BeforeClass
     public void seuUp(){
