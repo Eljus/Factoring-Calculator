@@ -20,9 +20,7 @@ public class FactoringCalculatorMainPage {
     }
 
     public FactoringCalculatorMainPage clickAcceptCookies() {
-        if(getAcceptCookies().isDisplayed()){
-            getAcceptCookies().click();
-        }
+        getAcceptCookies().click();
         return this;
     }
 
@@ -133,6 +131,7 @@ public class FactoringCalculatorMainPage {
         getInvoiceFinancingPercentage().shouldHave(exactText(invoiceFinancingPercentage));
         return this;
     }
+
     public FactoringCalculatorMainPage verifyInvoiceFinancingEurValue(String invoiceFinancingPercentage) {
         getInvoiceFinancingEur().shouldHave(exactText(invoiceFinancingPercentage));
         return this;
