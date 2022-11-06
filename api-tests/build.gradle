@@ -23,3 +23,7 @@ dependencies {
     testImplementation "org.testng:testng:${testNgVersion}"
     implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonDatabindVersion}"
 }
+
+test {
+    useTestNG()
+}
