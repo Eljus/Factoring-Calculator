@@ -35,6 +35,7 @@ dependencies {
     implementation "ch.qos.logback:logback-classic:${logbackClassicVersion}"
     implementation "ch.qos.logback:logback-core:${logbackCoreVersion}"
     implementation "org.awaitility:awaitility:${awaitabilityVersion}"
+    testImplementation 'org.uncommons:reportng:1.1.4'
 }
 
 

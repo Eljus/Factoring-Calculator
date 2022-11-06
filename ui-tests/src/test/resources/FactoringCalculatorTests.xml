@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Swedbank Practise exercise" verbose="2" configfailurepolicy="continue" parallel="methods" thread-count="8">
+    <listeners>
+        <listener class-name="org.testng.reporters.XMLReporter" />
+    </listeners>
+
+    <test name="Basic UI tests for demo work purpose">
+        <classes>
+            <class name="com.factoring.ui.tests.FactoringCalculatorTests"/>
+        </classes>
+    </test>
+</suite>

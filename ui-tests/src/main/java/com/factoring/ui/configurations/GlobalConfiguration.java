@@ -13,8 +13,9 @@ public class GlobalConfiguration {
         Configuration.baseUrl = config.baseUrl();
         Configuration.timeout = config.browserTimeout();
         Configuration.browserSize = "1920x1080";
-        Configuration.headless = false;
+        Configuration.headless = true;
         Configuration.fastSetValue = true;
         Configuration.holdBrowserOpen = false;
+
     }
 }
