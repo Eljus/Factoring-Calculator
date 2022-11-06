@@ -7,3 +7,5 @@ out/
 *.lock
 
 api-tests/logs
+ui-tests/logs/
+ui-tests/allure-results/

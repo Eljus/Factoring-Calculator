@@ -13,28 +13,27 @@ repositories {
 }
 
 ext {
-    restAssuredVersion = "5.2.0"
+    selenideVersion = "6.9.0"
     testNgVersion = "7.6.1"
-    jacksonDatabindVersion = "2.13.4.2"
     ownerVersion = "1.0.4"
     slf4jVersion = "1.7.25"
     logbackClassicVersion = "1.2.5"
     logbackCoreVersion = "1.2.3"
     awaitabilityVersion = "4.2.0"
-    hamcrestVersion = "2.2"
 }
 
 dependencies {
-    implementation "io.rest-assured:rest-assured:${restAssuredVersion}"
+    implementation "com.codeborne:selenide:${selenideVersion}"
     implementation "org.testng:testng:${testNgVersion}"
-    implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonDatabindVersion}"
+    implementation 'com.automation-remarks:video-recorder-testng:1.0'
+    implementation 'io.qameta.allure:allure-testng:2.20.0'
     implementation "org.aeonbits.owner:owner:${ownerVersion}"
     implementation "org.slf4j:slf4j-api:${slf4jVersion}"
     implementation "ch.qos.logback:logback-classic:${logbackClassicVersion}"
     implementation "ch.qos.logback:logback-core:${logbackCoreVersion}"
     implementation "org.awaitility:awaitility:${awaitabilityVersion}"
-    testImplementation "org.hamcrest:hamcrest:${hamcrestVersion}"
 }
+
 
 test {
     useTestNG()

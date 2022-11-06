@@ -1,4 +1,5 @@
 rootProject.name = "Factoring-Calculator"
 include 'untitled'
 include 'api-tests'
+include 'ui-tests'
 
