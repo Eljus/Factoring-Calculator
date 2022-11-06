@@ -21,6 +21,9 @@ ext {
     logbackClassicVersion = "1.2.5"
     logbackCoreVersion = "1.2.3"
     awaitabilityVersion = "4.2.0"
+    videoRecorderVersion = "1.0"
+    allureVersion = "2.20.0"
+    reportNgVersion = "1.1.4"
 }
 
 dependencies {
@@ -28,14 +31,14 @@ dependencies {
 
     implementation "com.codeborne:selenide:${selenideVersion}"
     implementation "org.testng:testng:${testNgVersion}"
-    implementation 'com.automation-remarks:video-recorder-testng:1.0'
-    implementation 'io.qameta.allure:allure-testng:2.20.0'
+    implementation "com.automation-remarks:video-recorder-testng:${videoRecorderVersion}"
+    implementation "io.qameta.allure:allure-testng:${allureVersion}"
     implementation "org.aeonbits.owner:owner:${ownerVersion}"
     implementation "org.slf4j:slf4j-api:${slf4jVersion}"
     implementation "ch.qos.logback:logback-classic:${logbackClassicVersion}"
     implementation "ch.qos.logback:logback-core:${logbackCoreVersion}"
     implementation "org.awaitility:awaitility:${awaitabilityVersion}"
-    testImplementation 'org.uncommons:reportng:1.1.4'
+    testImplementation "org.uncommons:reportng:${reportNgVersion}"
 }
 
 

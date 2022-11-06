@@ -11,3 +11,4 @@ ui-tests/logs/
 ui-tests/allure-results/
 ui-tests/test-output
 api-tests/test-output
+api-tests/allure-results/

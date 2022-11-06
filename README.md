@@ -28,5 +28,6 @@ There are two ways to generate reports:
 2. XML report
 <br>
 In order to generate results using allure, it has to be installed on the local machine, but I would encourage using it instead. Guide can be found here: https://docs.qameta.io/allure-report/
+Simply run the next command in the "cd .\Factoring-Calculator\ui-tests" folder: "allure serve .\allure-results\"
 <br>
 If easier path is chosen, xml report is generated in test-output folder

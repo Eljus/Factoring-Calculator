@@ -2,7 +2,6 @@ package com.factoring.ui.pageObject;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
-import com.factoring.ui.configurations.GlobalConfiguration;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
