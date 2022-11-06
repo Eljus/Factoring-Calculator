@@ -1,9 +1,7 @@
 package com.factoring.ui.configurations;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
 import org.aeonbits.owner.ConfigFactory;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 public class GlobalConfiguration {

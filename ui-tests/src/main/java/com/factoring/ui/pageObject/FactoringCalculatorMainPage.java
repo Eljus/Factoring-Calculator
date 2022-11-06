@@ -20,7 +20,9 @@ public class FactoringCalculatorMainPage {
     }
 
     public FactoringCalculatorMainPage clickAcceptCookies() {
-        getAcceptCookies().click();
+        if(getAcceptCookies().isDisplayed()){
+            getAcceptCookies().click();
+        }
         return this;
     }
 
@@ -29,8 +31,28 @@ public class FactoringCalculatorMainPage {
         return this;
     }
 
+    public FactoringCalculatorMainPage clearInvoiceAmountField() {
+        getInvoiceAmount().clear();
+        return this;
+    }
+
+    public FactoringCalculatorMainPage clearInterestRateField() {
+        getInterestRate().clear();
+        return this;
+    }
+
+    public FactoringCalculatorMainPage clearCommissionFeeField() {
+        getCommissionFee().clear();
+        return this;
+    }
+
     public FactoringCalculatorMainPage verifyInterestRateErrorMessage(String errorMessage) {
         getInterestRateErrorMessage().shouldHave(exactText(errorMessage));
+        return this;
+    }
+
+    public FactoringCalculatorMainPage verifyInterestRateErrorMessageNotDisplayed() {
+        getInterestRateErrorMessage().shouldNotBe(visible);
         return this;
     }
 
@@ -103,7 +125,7 @@ public class FactoringCalculatorMainPage {
     }
 
     public FactoringCalculatorMainPage setCommissionFee(String commissionFee) {
-        getPaymentTerm().setValue(commissionFee);
+        getCommissionFee().setValue(commissionFee);
         return this;
     }
 
