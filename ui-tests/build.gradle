@@ -8,6 +8,7 @@ targetCompatibility = '11'
 group 'com.example'
 version '1.0-SNAPSHOT'
 
+
 repositories {
     mavenCentral()
 }
@@ -23,6 +24,8 @@ ext {
 }
 
 dependencies {
+    implementation project(':api-tests')
+
     implementation "com.codeborne:selenide:${selenideVersion}"
     implementation "org.testng:testng:${testNgVersion}"
     implementation 'com.automation-remarks:video-recorder-testng:1.0'

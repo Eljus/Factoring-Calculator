@@ -1,5 +1,6 @@
 rootProject.name = "Factoring-Calculator"
-include 'untitled'
 include 'api-tests'
 include 'ui-tests'
 
+rootProject.name = 'dependencies-java'
+include 'api-tests', 'ui-tests'
