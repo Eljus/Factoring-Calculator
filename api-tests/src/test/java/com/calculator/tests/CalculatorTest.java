@@ -1,25 +1,16 @@
 package com.calculator.tests;
 
-import com.calculator.api.services.ApiService;
+import com.calculator.api.conditions.Conditions;
 import com.calculator.api.payloads.FactoringCalculate;
-import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
+import com.calculator.api.services.endpointServices.FactoringApiService;
 import lombok.extern.slf4j.Slf4j;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 @Slf4j
 public class CalculatorTest {
 
-    private final ApiService apiService = new ApiService();
-
-    @BeforeClass
-    public void seuUp(){
-        RestAssured.baseURI = "https://swedbankab.d3.sc.omtrdc.net/b/ss/swedbankabbballswedprod/1/JS-2.9.0/s92561309652512";
-    }
-
     @Test
-    public void abilityToCalculateFactoringCalculator(){
+    public void abilityToCalculateFactoringCalculator() {
         FactoringCalculate factoringCalculate = new FactoringCalculate()
                 .aqb("1")
                 .ndh("1")
@@ -61,13 +52,7 @@ public class CalculatorTest {
                 .lrt("3")
                 .aqe("1");
 
-        RestAssured
-                .given().contentType(ContentType.JSON).log().all()
-                .body(factoringCalculate)
-                .when()
-                .get()
-                .then().log().all()
-                .assertThat()
-                .statusCode(200);
+        new FactoringApiService().getCalculate(factoringCalculate)
+                .shouldHave(Conditions.statusCode(200));
     }
 }

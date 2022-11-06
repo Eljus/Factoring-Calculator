@@ -20,6 +20,8 @@ ext {
     slf4jVersion = "1.7.25"
     logbackClassicVersion = "1.2.5"
     logbackCoreVersion = "1.2.3"
+    awaitabilityVersion = "4.2.0"
+    hamcrestVersion = "2.2"
 }
 
 dependencies {
@@ -30,7 +32,8 @@ dependencies {
     implementation "org.slf4j:slf4j-api:${slf4jVersion}"
     implementation "ch.qos.logback:logback-classic:${logbackClassicVersion}"
     implementation "ch.qos.logback:logback-core:${logbackCoreVersion}"
-
+    implementation "org.awaitility:awaitility:${awaitabilityVersion}"
+    testImplementation "org.hamcrest:hamcrest:${hamcrestVersion}"
 }
 
 test {
